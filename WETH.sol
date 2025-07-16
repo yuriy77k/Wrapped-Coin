@@ -59,7 +59,7 @@ contract WETH9 {
 
     function transfer(address dst, uint wad) public returns (bool) {
         if (dst == address(this)) {
-            // If dst is the contract itself, we treat it as a deposit
+            // If dst is the contract itself, we treat it as a withdraw
             withdraw(wad);
             return true;
         }
